@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36327.8 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemeCalc", "MemeCalc\MemeCalc.csproj", "{E590B09E-A5AB-4964-BB0F-265538A3281C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemeCalc.Tests", "MemeCalc.Tests\MemeCalc.Tests.csproj", "{C33EB69A-0709-4F66-992D-08BE714F7C35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemeCalcSandbox", "MemeCalcSandbox\MemeCalcSandbox.csproj", "{848BE9A6-72F0-44DB-B83A-DCB404B46050}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemeCalcBackEnd", "MemeCalcBackEnd\MemeCalcBackEnd.csproj", "{E067CB88-71A4-49A4-AFC2-7C0F5885FA34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E590B09E-A5AB-4964-BB0F-265538A3281C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E590B09E-A5AB-4964-BB0F-265538A3281C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E590B09E-A5AB-4964-BB0F-265538A3281C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E590B09E-A5AB-4964-BB0F-265538A3281C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C33EB69A-0709-4F66-992D-08BE714F7C35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C33EB69A-0709-4F66-992D-08BE714F7C35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C33EB69A-0709-4F66-992D-08BE714F7C35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C33EB69A-0709-4F66-992D-08BE714F7C35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{848BE9A6-72F0-44DB-B83A-DCB404B46050}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{848BE9A6-72F0-44DB-B83A-DCB404B46050}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{848BE9A6-72F0-44DB-B83A-DCB404B46050}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{848BE9A6-72F0-44DB-B83A-DCB404B46050}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E067CB88-71A4-49A4-AFC2-7C0F5885FA34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E067CB88-71A4-49A4-AFC2-7C0F5885FA34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E067CB88-71A4-49A4-AFC2-7C0F5885FA34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E067CB88-71A4-49A4-AFC2-7C0F5885FA34}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {96FA6146-5BA5-4219-9C8F-20F5CF7E4E94}
+	EndGlobalSection
+EndGlobal

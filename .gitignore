@@ -1,0 +1,84 @@
+# ===============================
+# .gitignore for WPF (.NET)
+# ===============================
+
+# Build results
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+*.log
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio cache & folders
+.vs/
+.vscode/
+
+# Rider & JetBrains
+.idea/
+*.DotSettings*
+
+# Windows crash reports
+*.pidb
+*.svclog
+
+# Backup & temp files
+*.tmp
+*.bak
+*~
+*.swp
+
+# NuGet
+*.nupkg
+packages/
+project.lock.json
+project.assets.json
+*.snupkg
+
+# Dotnet CLI
+**/publish/
+**/Release/
+**/*.dbmdl
+
+# XAML designer files
+*.g.i.cs
+*.g.cs
+*.i.cs
+Generated_Code/
+
+# Others
+_ReSharper*/
+TestResults/
+AppPackages/
+*.vsix
+*.orig
+
+# Local config
+appsettings.Development.json
+secrets.json
+*.psess
+*.vsp
+*.psess
+
+# Entity Framework
+migrations/
+
+# Logs
+*.tlog/
+*.log
+
+# Auto-generated files
+*.cache
+*.dll
+*.exe
+*.pdb
+*.mdb
+
+# Windows-specific
+Thumbs.db
+Desktop.ini

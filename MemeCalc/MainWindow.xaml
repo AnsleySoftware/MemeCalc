@@ -5,7 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MemeCalc"
         mc:Ignorable="d"
-        Title="Memulator" Height="500" Width="400">
-    <Grid>
-    </Grid>
+        Title="MemeCalc" SizeToContent="WidthAndHeight">
+    <StackPanel Background="Gray">
+        <Label Background="AntiqueWhite" Height="56" Width="200"></Label>
+        <Label Height="50" Width="340"></Label>
+        <StackPanel Orientation="Horizontal">
+            <Label Height="50" Width="170" HorizontalAlignment="Left" Content="From" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30"></Label>
+            <ComboBox HorizontalAlignment="Right" Width="170"></ComboBox>
+        </StackPanel>
+        <Label Height="50" Width="174" HorizontalAlignment="Left"></Label>
+        <StackPanel Orientation="Horizontal">
+            <Label Height="50" Width="170" HorizontalAlignment="Left" Content="To" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30"></Label>
+            <ComboBox HorizontalAlignment="Right" Width="170"></ComboBox>
+        </StackPanel>
+        <StackPanel Height="22"></StackPanel>
+        <TextBox VerticalContentAlignment="Center" TextAlignment="Center" Height="50" Background="White" Width="330"></TextBox>
+        <StackPanel Height="22"/>
+        <Grid Height="168">
+            <Button Style="{StaticResource NumpadButtonStyle}" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="4,2,0,0" Width="60" Height="50"/>
+            <Button Style="{StaticResource NumpadButtonStyle}" Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="68,2,0,0" Width="60" Height="50"/>
+            <Button Style="{StaticResource NumpadButtonStyle}" Content="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="132,2,0,0" Width="60" Height="50"/>
+            <Button Style="{StaticResource NumpadButtonStyle}" Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="4,60,0,0" Width="60" Height="50"/>
+            <Button Style="{StaticResource NumpadButtonStyle}" Content="5" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="68,60,0,0" Width="60" Height="50"/>
+            <Button Style="{StaticResource NumpadButtonStyle}" Content="6" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="132,60,0,0" Width="60" Height="50"/>
+            <Button Style="{StaticResource NumpadButtonStyle}" Content="7" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="4,0,0,0" Width="60" Height="50"/>
+            <Button Style="{StaticResource NumpadButtonStyle}" Content="8" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="68,0,0,0" Width="60" Height="50"/>
+            <Button Style="{StaticResource NumpadButtonStyle}" Content="9" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="132,0,0,0" Width="60" Height="50"/>
+            <Button Style="{StaticResource NumpadButtonStyle}" Content="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="196,0,0,0" Width="60" Height="50"/>
+        </Grid>
+    </StackPanel>
 </Window>

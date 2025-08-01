@@ -99,7 +99,8 @@
                 { LengthUnit.Feet, 1.0m / 304.8m },
                 { LengthUnit.Yards, 1.0m / 914.4m },
                 { LengthUnit.Miles, 1.0m / 1_609_344m },
-                { LengthUnit.NauticalMiles, 1.0m / 1_852_000m }
+                { LengthUnit.NauticalMiles, 1.0m / 1_852_000m },
+                { LengthUnit.Bananas, 1.0m / 175m }
             };
 
             public static readonly Dictionary<WeightUnit, decimal> weightUnits = new()
@@ -152,7 +153,8 @@
             Feet,
             Yards,
             Miles,
-            NauticalMiles
+            NauticalMiles,
+            Bananas
         }
 
         public enum VolumeUnit

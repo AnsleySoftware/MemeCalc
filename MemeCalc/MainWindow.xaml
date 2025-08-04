@@ -5,33 +5,107 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MemeCalc"
         mc:Ignorable="d"
-        Title="MemeCalc" SizeToContent="WidthAndHeight">
-    <StackPanel Background="Gray">
-        <Label Background="AntiqueWhite" Height="56" Width="200"></Label>
-        <Label Height="50" Width="340"></Label>
-        <StackPanel Orientation="Horizontal">
-            <Label Height="50" Width="170" HorizontalAlignment="Left" Content="From" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30"></Label>
-            <ComboBox HorizontalAlignment="Right" Width="170"></ComboBox>
-        </StackPanel>
-        <Label Height="50" Width="174" HorizontalAlignment="Left"></Label>
-        <StackPanel Orientation="Horizontal">
-            <Label Height="50" Width="170" HorizontalAlignment="Left" Content="To" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30"></Label>
-            <ComboBox HorizontalAlignment="Right" Width="170"></ComboBox>
-        </StackPanel>
-        <StackPanel Height="22"></StackPanel>
-        <TextBox VerticalContentAlignment="Center" TextAlignment="Center" Height="50" Background="White" Width="330"></TextBox>
-        <StackPanel Height="22"/>
-        <Grid Height="168">
-            <Button Style="{StaticResource NumpadButtonStyle}" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="4,2,0,0" Width="60" Height="50"/>
-            <Button Style="{StaticResource NumpadButtonStyle}" Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="68,2,0,0" Width="60" Height="50"/>
-            <Button Style="{StaticResource NumpadButtonStyle}" Content="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="132,2,0,0" Width="60" Height="50"/>
-            <Button Style="{StaticResource NumpadButtonStyle}" Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="4,60,0,0" Width="60" Height="50"/>
-            <Button Style="{StaticResource NumpadButtonStyle}" Content="5" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="68,60,0,0" Width="60" Height="50"/>
-            <Button Style="{StaticResource NumpadButtonStyle}" Content="6" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="132,60,0,0" Width="60" Height="50"/>
-            <Button Style="{StaticResource NumpadButtonStyle}" Content="7" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="4,0,0,0" Width="60" Height="50"/>
-            <Button Style="{StaticResource NumpadButtonStyle}" Content="8" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="68,0,0,0" Width="60" Height="50"/>
-            <Button Style="{StaticResource NumpadButtonStyle}" Content="9" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="132,0,0,0" Width="60" Height="50"/>
-            <Button Style="{StaticResource NumpadButtonStyle}" Content="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="196,0,0,0" Width="60" Height="50"/>
+        Title="MemeCalc"
+        Width="350" Height="570"
+        MinWidth="200" MinHeight="570"
+        ResizeMode="CanResize"
+        Background="#990047AB"
+        KeyDown="Window_KeyDown">
+    <Grid Margin="10" >
+        
+        <Grid.Background>
+            <ImageBrush ImageSource="/beige-paper.png"
+                         TileMode="Tile"
+                         Viewport="0,0,64,64"
+                         ViewportUnits="Absolute"
+                         Opacity="0.2"
+                         Stretch="None"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/> <!-- Top Labels -->
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/> <!-- From section-->
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/> <!-- To section -->
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/> <!-- TextBox -->
+            <RowDefinition Height="Auto"/> <!-- Numpad -->
+        </Grid.RowDefinitions>
+
+        <Border Background="#FF0047AB" CornerRadius="12" Padding="10" Margin="10" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+            <Label Grid.Row="0"
+                   Content="{Binding Result}"
+                   FontSize="18"
+                   Background="White" 
+                   Height="56"
+                   HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center"
+                   HorizontalAlignment="Stretch"/>
+        </Border>
+        <Label Grid.Row="1" Height="30" HorizontalAlignment="Stretch"/>
+        <Grid Grid.Row="2" Margin="0,5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Height="50" Content="FROM" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30"/>
+            <Border Grid.Column="1" Background="#FF0047AB" CornerRadius="12" Padding="2" Margin="5,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Stretch">
+                <ComboBox ItemsSource="{Binding AvailableUnits}"
+                          SelectedItem="{Binding SelectedFromUnit, Mode=TwoWay}"
+                          Height="46"
+                          Background="White"
+                          BorderThickness="0"
+                          Margin="2"
+                          VerticalContentAlignment="Center"/>
+            </Border>
+            
+            
         </Grid>
-    </StackPanel>
+        <Label Grid.Row="3" Height="20"/> <!-- Spacer -->
+        <Grid Grid.Row="4" Margin="0, 5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Height="50" Content="TO" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30"/>
+            <Border Grid.Column="1" Background="#FF0047AB" CornerRadius="12" Padding="2" Margin="5,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Stretch">
+                <ComboBox Height="46"
+                          ItemsSource="{Binding AvailableUnits}"
+                          SelectedItem="{Binding SelectedToUnit, Mode=TwoWay}"
+                          Background="White" 
+                          BorderThickness="0" 
+                          Margin="2" 
+                          VerticalContentAlignment="Center"/>
+            </Border>
+        </Grid>
+        <Label Grid.Row="5" Height="20"/> <!-- Spacer -->
+        <Border Grid.Row="6" Background="White" CornerRadius="10" Padding="2" Margin="5"> 
+            <TextBox Height="50"
+                     Text="{Binding InputValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     VerticalContentAlignment="Center" 
+                     TextAlignment="Center" 
+                     Background="Transparent" 
+                     HorizontalAlignment="Stretch" 
+                     Padding="8" 
+                     BorderThickness="0" 
+                     FontSize="16"/>
+        </Border>
+        
+        <UniformGrid Grid.Row="7" Columns="4" Rows="3" Margin="0,10,0,0">
+            <Button Style="{StaticResource NumpadButtonStyle}" Content="1" Command="{Binding AppendInputCommand}" CommandParameter="1"/>
+            <Button Style="{StaticResource NumpadButtonStyle}" Content="2" Command="{Binding AppendInputCommand}" CommandParameter="2"/>
+            <Button Style="{StaticResource NumpadButtonStyle}" Content="3" Command="{Binding AppendInputCommand}" CommandParameter="3"/>
+            <Button Style="{StaticResource NumpadButtonStyle}" Content="4" Command="{Binding AppendInputCommand}" CommandParameter="4"/>
+            <Button Style="{StaticResource NumpadButtonStyle}" Content="5" Command="{Binding AppendInputCommand}" CommandParameter="5"/>
+            <Button Style="{StaticResource NumpadButtonStyle}" Content="6" Command="{Binding AppendInputCommand}" CommandParameter="6"/>
+            <Button Style="{StaticResource NumpadButtonStyle}" Content="7" Command="{Binding AppendInputCommand}" CommandParameter="7"/>
+            <Button Style="{StaticResource NumpadButtonStyle}" Content="8" Command="{Binding AppendInputCommand}" CommandParameter="8"/>
+            <Button Style="{StaticResource NumpadButtonStyle}" Content="9" Command="{Binding AppendInputCommand}" CommandParameter="9"/>
+            <Button Style="{StaticResource NumpadButtonStyle}" Content="0" Command="{Binding AppendInputCommand}" CommandParameter="0"/>
+            
+            <Button Style="{StaticResource NumpadButtonStyle}" Content="{Binding CategoryDisplayName}" 
+                    Command="{Binding CycleCategoryCommand}" />
+            <Button Style="{StaticResource NumpadButtonStyle}" Content="✓" Background="Green" Command="{Binding ConvertCommand}"/>
+        </UniformGrid>
+    </Grid>
 </Window>

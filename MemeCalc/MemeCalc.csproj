@@ -9,7 +9,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="beige-paper.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MemeCalcBackEnd\MemeCalcBackEnd.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="beige-paper.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

@@ -19,6 +19,18 @@ namespace MemeCalc
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = new MainViewModel();
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                if (DataContext is MainViewModel vm && vm.ConvertCommand.CanExecute(null))
+                {
+                    vm.ConvertCommand.Execute(null);
+                }
+            }
         }
     }
 }

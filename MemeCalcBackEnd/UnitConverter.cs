@@ -72,53 +72,57 @@
             public static readonly Dictionary<VolumeUnit, decimal> volumeUnits = new()
             {
                 { VolumeUnit.Milliliters, 1.0m },
-                { VolumeUnit.CubicCentimeters, 1.0m / 1.0m },
-                { VolumeUnit.Liters, 1.0m / 1000m },
-                { VolumeUnit.CubicMeters, 1.0m / 1_000_000m},
-                { VolumeUnit.Teaspoons, 1.0m / 4.9289192708m },
-                { VolumeUnit.FluidOunces, 1.0m / 29.573515625m },
-                { VolumeUnit.Cups, 1.0m / 236.588125m },
-                { VolumeUnit.Pints, 1.0m / 473.17625m },
-                { VolumeUnit.Quarts, 1.0m / 946.3525m },
-                { VolumeUnit.Gallons, 1.0m / 3785.41m },
-                { VolumeUnit.CubicInches, 1.0m / 16.387064m },
-                { VolumeUnit.CubicFeet, 1.0m / 28316.846592m },
-                { VolumeUnit.CubicYards, 1.0m / 764_554.85798m }
+                { VolumeUnit.CubicCentimeters,  1.0m },
+                { VolumeUnit.Liters, 1000m },
+                { VolumeUnit.CubicMeters, 1_000_000m},
+                { VolumeUnit.Teaspoons, 4.9289192708m },
+                { VolumeUnit.FluidOunces, 29.573515625m },
+                { VolumeUnit.Cups, 236.588125m },
+                { VolumeUnit.Pints, 473.17625m },
+                { VolumeUnit.Quarts, 946.3525m },
+                { VolumeUnit.Gallons, 3785.41m },
+                { VolumeUnit.CubicInches, 16.387064m },
+                { VolumeUnit.CubicFeet, 28316.846592m },
+                { VolumeUnit.CubicYards, 764_554.85798m },
+                { VolumeUnit.Adult_Humans, 42_000 }
             };
 
             public static readonly Dictionary<LengthUnit, decimal> lengthUnits = new()
             {
                 { LengthUnit.Millimeters, 1.0m },
-                { LengthUnit.Angstroms, 1.0m / 0.0000001m },
-                { LengthUnit.Nanometers, 1.0m / 0.000001m },
-                { LengthUnit.Microns, 1.0m / 0.001m},
-                { LengthUnit.Centimeters, 1.0m / 10m },
-                { LengthUnit.Meters, 1.0m / 1000m },
-                { LengthUnit.Kilometers, 1.0m / 1_000_000m },
-                { LengthUnit.Inches, 1.0m / 25.4m },
-                { LengthUnit.Feet, 1.0m / 304.8m },
-                { LengthUnit.Yards, 1.0m / 914.4m },
-                { LengthUnit.Miles, 1.0m / 1_609_344m },
-                { LengthUnit.NauticalMiles, 1.0m / 1_852_000m },
-                { LengthUnit.Bananas, 1.0m / 175m }
+                { LengthUnit.Angstroms, 0.0000001m },
+                { LengthUnit.Nanometers, 0.000001m },
+                { LengthUnit.Microns, 0.001m},
+                { LengthUnit.Centimeters, 10m },
+                { LengthUnit.Meters, 1000m },
+                { LengthUnit.Kilometers, 1_000_000m },
+                { LengthUnit.Inches, 25.4m },
+                { LengthUnit.Feet, 304.8m },
+                { LengthUnit.Yards, 914.4m },
+                { LengthUnit.Miles, 1_609_344m },
+                { LengthUnit.NauticalMiles, 1_852_000m },
+                { LengthUnit.Bananas, 175m },
+                { LengthUnit.FootballFields, 109_728m }
             };
 
             public static readonly Dictionary<WeightUnit, decimal> weightUnits = new()
             {
                 { WeightUnit.Grams, 1.0m },
-                { WeightUnit.Carats, 1.0m / 0.200000m },
-                { WeightUnit.Milligrams, 1.0m / 0.001000m },
-                { WeightUnit.Centigrams, 1.0m / 0.010000m},
-                { WeightUnit.Decigrams, 1.0m / 0.100000m },
-                { WeightUnit.Dekagrams, 1.0m / 10.000000m },
-                { WeightUnit.Hectograms, 1.0m / 100.000000m },
-                { WeightUnit.Kilograms, 1.0m / 1000.000000m },
-                { WeightUnit.MetricTonnes, 1.0m / 1000000.000000m },
-                { WeightUnit.Ounces, 1.0m / 28.349523125m },
-                { WeightUnit.Pounds, 1.0m / 453.59237m },
-                { WeightUnit.Stone, 1.0m / 6350.293000m },
-                { WeightUnit.ShortTons, 1.0m / 907184.740000m },
-                { WeightUnit.LongTons, 1.0m / 1016046.9088m }
+                { WeightUnit.Carats, 0.200000m },
+                { WeightUnit.Milligrams, 0.001000m },
+                { WeightUnit.Centigrams, 0.010000m},
+                { WeightUnit.Decigrams, 0.100000m },
+                { WeightUnit.Dekagrams, 10.000000m },
+                { WeightUnit.Hectograms, 100.000000m },
+                { WeightUnit.Kilograms, 1000.000000m },
+                { WeightUnit.MetricTonnes, 1000000.000000m },
+                { WeightUnit.Ounces, 28.349523125m },
+                { WeightUnit.Pounds, 453.59237m },
+                { WeightUnit.Stone, 6350.293000m },
+                { WeightUnit.ShortTons, 907184.740000m },
+                { WeightUnit.LongTons, 1016046.9088m },
+                { WeightUnit.Penguins, 34000m },
+                { WeightUnit.JumboJets, 50_000_000m }
             };
         }
 
@@ -137,7 +141,9 @@
             Pounds,
             Stone,
             ShortTons,
-            LongTons
+            LongTons,
+            Penguins,
+            JumboJets
         }
 
         public enum LengthUnit
@@ -154,7 +160,8 @@
             Yards,
             Miles,
             NauticalMiles,
-            Bananas
+            Bananas,
+            FootballFields
         }
 
         public enum VolumeUnit
@@ -171,7 +178,8 @@
             Gallons,
             CubicInches,
             CubicFeet,
-            CubicYards
+            CubicYards,
+            Adult_Humans
         }
     }
 }

@@ -14,8 +14,8 @@ namespace MemeCalc
         public enum UnitCategory { Length, Weight, Volume }
         private UnitCategory selectedCategory;
         private decimal inputValue;
-        private object selectedFromUnit;
-        private object selectedToUnit;
+        private UnitDisplay selectedFromUnit;
+        private UnitDisplay selectedToUnit;
         private string result;
 
         public UnitCategory SelectedCategory
@@ -36,15 +36,15 @@ namespace MemeCalc
             }
         }
 
-        public ObservableCollection<object> AvailableUnits { get; } = new();
+        public ObservableCollection<UnitDisplay> AvailableUnits { get; } = new();
 
-        public object SelectedFromUnit
+        public UnitDisplay SelectedFromUnit
         {
             get => selectedFromUnit;
             set => SetProperty(ref selectedFromUnit, value);
         }
 
-        public object SelectedToUnit
+        public UnitDisplay SelectedToUnit
         {
             get => selectedToUnit;
             set => SetProperty(ref selectedToUnit, value);
@@ -110,16 +110,33 @@ namespace MemeCalc
             switch (SelectedCategory)
             {
                 case UnitCategory.Length:
-                    foreach (var unit in Enum.GetValues(typeof(UnitConverter.LengthUnit)))
-                        AvailableUnits.Add(unit);
+                    foreach (UnitConverter.LengthUnit unit in Enum.GetValues(typeof(UnitConverter.LengthUnit)))
+                    {
+                        if (UnitConverter.ConversionData.lengthUnits.TryGetValue(unit, out var unitData))
+                        {
+                            AvailableUnits.Add(new UnitDisplay(unit, unitData));
+                        }
+                    }
                     break;
+
                 case UnitCategory.Weight:
-                    foreach (var unit in Enum.GetValues(typeof(UnitConverter.WeightUnit)))
-                        AvailableUnits.Add(unit);
+                    foreach (UnitConverter.WeightUnit unit in Enum.GetValues(typeof(UnitConverter.WeightUnit)))
+                    {
+                        if (UnitConverter.ConversionData.weightUnits.TryGetValue(unit, out var unitData))
+                        {
+                            AvailableUnits.Add(new UnitDisplay(unit, unitData));
+                        }
+                    }
                     break;
+
                 case UnitCategory.Volume:
-                    foreach (var unit in Enum.GetValues(typeof(UnitConverter.VolumeUnit)))
-                        AvailableUnits.Add(unit);
+                    foreach (UnitConverter.VolumeUnit unit in Enum.GetValues(typeof(UnitConverter.VolumeUnit)))
+                    {
+                        if (UnitConverter.ConversionData.volumeUnits.TryGetValue(unit, out var unitData))
+                        {
+                            AvailableUnits.Add(new UnitDisplay(unit, unitData));
+                        }
+                    }
                     break;
             }
             SelectedFromUnit = AvailableUnits.Count > 0 ? AvailableUnits[0] : null;
@@ -133,13 +150,13 @@ namespace MemeCalc
                 decimal output = SelectedCategory switch
                 {
                     UnitCategory.Length => new UnitConverter.LengthUnitConverter(InputValue,
-                    (UnitConverter.LengthUnit)SelectedFromUnit, (UnitConverter.LengthUnit)SelectedToUnit).Convert(),
+                    (UnitConverter.LengthUnit)SelectedFromUnit.EnumValue, (UnitConverter.LengthUnit)SelectedToUnit.EnumValue).Convert(),
 
                     UnitCategory.Weight => new UnitConverter.WeightUnitConverter(InputValue,
-                    (UnitConverter.WeightUnit)SelectedFromUnit, (UnitConverter.WeightUnit)SelectedToUnit).Convert(),
+                    (UnitConverter.WeightUnit)SelectedFromUnit.EnumValue, (UnitConverter.WeightUnit)SelectedToUnit.EnumValue).Convert(),
 
                     UnitCategory.Volume => new UnitConverter.VolumeUnitConverter(InputValue,
-                    (UnitConverter.VolumeUnit)SelectedFromUnit, (UnitConverter.VolumeUnit)SelectedToUnit).Convert(),
+                    (UnitConverter.VolumeUnit)SelectedFromUnit.EnumValue, (UnitConverter.VolumeUnit)SelectedToUnit.EnumValue).Convert(),
                     _ => throw new InvalidOperationException("Invalid category")
                 };
                 Result = output.ToString("N4");
@@ -157,6 +174,20 @@ namespace MemeCalc
             storage = value;
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
             return true;
+        }
+    }
+
+    public class UnitDisplay
+    {
+        public object EnumValue { get; }
+        public string Name => Unit.Name;
+        public string? IconPath => Unit.IconPath;
+        public UnitClass Unit { get; }
+
+        public UnitDisplay(object enumValue, UnitClass unit)
+        {
+            EnumValue = enumValue;
+            Unit = unit;
         }
     }
 }

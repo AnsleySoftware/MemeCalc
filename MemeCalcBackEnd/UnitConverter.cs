@@ -84,8 +84,16 @@
                 { VolumeUnit.CubicInches, new UnitClass("Cubic Inches", 16.387064m, "Icons/beaker.png") },
                 { VolumeUnit.CubicFeet, new UnitClass("Cubic Feet", 28316.846592m, "Icons/beaker.png") },
                 { VolumeUnit.CubicYards, new UnitClass("Cubic Yards", 764_554.85798m, "Icons/beaker.png") },
-                { VolumeUnit.AdultHumans, new UnitClass("Adult Human Bodies", 42_000m) },
-                { VolumeUnit.DirtyDiapers, new UnitClass("Dirty Diapers", 105m, "Icons/diaper.png") }
+                { VolumeUnit.AdultHumans, new UnitClass("Adult Human Bodies", 42_000m, "Icons/adultBody.png") },
+                { VolumeUnit.DirtyDiapers, new UnitClass("Dirty Diapers", 105m, "Icons/diaper.png") },
+                { VolumeUnit.KFCBuckets, new UnitClass("Family Chicken Buckets", 5000m, "Icons/chickenBucket.png") },
+                { VolumeUnit.PortaPotties, new UnitClass("Porta Potties", 227_100m, "Icons/portapottie.png") },
+                { VolumeUnit.BeerKegs, new UnitClass("Beer Kegs", 58_700, "Icons/beerKeg.png") },
+                { VolumeUnit.KetchupPackets, new UnitClass("Ketchup Packets", 9m, "Icons/ketchup.png") },
+                { VolumeUnit.Bathtubs, new UnitClass("Bath Tubs", 302_800, "Icons/bathtub.png") },
+                { VolumeUnit.OlympicPools, new UnitClass("Olympic Swimming Pools", 2_500_000_000m, "Icons/swimmingPool.png") },
+                { VolumeUnit.ShotGlasses, new UnitClass("Shot Glasses", 44m, "Icons/tumblerGlass.png") },
+                { VolumeUnit.LargeMilkshakes, new UnitClass("Large Milkshakes", 650m, "Icons/milkshake.png") }
             };
 
             public static readonly Dictionary<LengthUnit, UnitClass> lengthUnits = new()
@@ -104,8 +112,15 @@
                 { LengthUnit.NauticalMiles, new UnitClass("Nautical Miles", 1_852_000m, "Icons/ruler.png") },
                 { LengthUnit.Bananas, new UnitClass("Bananas", 175m, "Icons/banana.png") },
                 { LengthUnit.FootballFields, new UnitClass("Football Fields", 109_728m, "Icons/footballfield.png") },
-                { LengthUnit.F150s, new UnitClass("Ford F150s", 5882.64m) },
-                { LengthUnit.AircraftCarriers, new UnitClass("Aircraft Carriers", 342_290.4m) }
+                { LengthUnit.F150s, new UnitClass("Ford F150s", 5882.64m, "Icons/pickupTruck.png") },
+                { LengthUnit.AircraftCarriers, new UnitClass("Aircraft Carriers", 342_290.4m, "Icons/aircraftCarrier.png") },
+                { LengthUnit.SchoolBuses, new UnitClass("School Buses", 10670, "Icons/schoolBus.png") },
+                { LengthUnit.ParkingSpots, new UnitClass("Parking Spots", 5480m, "Icons/parkingSpot.png") },
+                { LengthUnit.TRexes, new UnitClass("T-Rexes", 12_200m, "Icons/tRex.png") },
+                { LengthUnit.SubwayFootlongs, new UnitClass("Subway FootLongs", 280m, "Icons/sub.png") },
+                { LengthUnit.HotDogs, new UnitClass("Hot Dogs", 150m, "Icons/hotdog.png") },
+                { LengthUnit.GreatWalls, new UnitClass("Great Walls of China", 21196000000m, "Icons/greatWall.png") },
+                { LengthUnit.EmpireStateBuildings, new UnitClass("Empire State Buildings", 381000m, "Icons/skyScraper.png") }
             };
 
             public static readonly Dictionary<WeightUnit, UnitClass> weightUnits = new()
@@ -126,8 +141,15 @@
                 { WeightUnit.LongTons, new UnitClass("Long Tons", 1016046.9088m, "Icons/scale.png") },
                 { WeightUnit.Penguins, new UnitClass("Penguins", 34000m, "Icons/penguin.png") },
                 { WeightUnit.JumboJets, new UnitClass("Jumbo Jets", 50_000_000m, "Icons/airplane.png") },
-                { WeightUnit.F150s, new UnitClass("Ford F150s", 2_267_960) },
-                { WeightUnit.AircraftCarriers, new UnitClass("Aircraft Carriers", 96_300_847_462m) }
+                { WeightUnit.F150s, new UnitClass("Ford F150s", 2_267_960, "Icons/pickupTruck.png") },
+                { WeightUnit.AircraftCarriers, new UnitClass("Aircraft Carriers", 96_300_847_462m, "Icons/aircraftCarrier.png") },
+                { WeightUnit.LabradorRetrievers, new UnitClass("Labrador Retrievers", 29_500m, "Icons/dog.png") },
+                { WeightUnit.Marshmallows, new UnitClass("Marshmallows", 7m, "Icons/marshmallow.png") },
+                { WeightUnit.Sofas, new UnitClass("Sofas", 136_000m, "Icons/sofa.png") },
+                { WeightUnit.MoonLanders, new UnitClass("Moon Landers", 15_200_000m, "Icons/moonlander.png") },
+                { WeightUnit.Paperclips, new UnitClass("Paper Clips", 1m, "Icons/paperclip.png") },
+                { WeightUnit.BigMacs, new UnitClass("Big Macs", 240m, "Icons/cheeseburger.png") },
+                
             };
         }
 
@@ -135,7 +157,7 @@
         {
             LabradorRetrievers,
             Marshmallows,
-            Couches,
+            Sofas,
             MoonLanders,
             Paperclips,
             BigMacs,

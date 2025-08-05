@@ -10,7 +10,10 @@
 
   <ItemGroup>
     <None Remove="beige-paper.png" />
+    <None Remove="Icons\beaker.png" />
     <None Remove="Icons\flag.png" />
+    <None Remove="Icons\ruler.png" />
+    <None Remove="Icons\scale.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +30,9 @@
     <Resource Include="Icons\airplane.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Icons\beaker.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Icons\diaper.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -37,6 +43,12 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Icons\penguin.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\ruler.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\scale.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

@@ -71,65 +71,77 @@
         {
             public static readonly Dictionary<VolumeUnit, UnitClass> volumeUnits = new()
             {
-                { VolumeUnit.Milliliters, new UnitClass("Milliliters", 1.0m) },
-                { VolumeUnit.CubicCentimeters, new UnitClass("Cubic Centimeters", 1.0m) },
-                { VolumeUnit.Liters, new UnitClass("Liters", 1000m) },
-                { VolumeUnit.CubicMeters, new UnitClass("Cubic Meters", 1_000_000m)},
-                { VolumeUnit.Teaspoons, new UnitClass("Teaspoons", 4.9289192708m) },
-                { VolumeUnit.FluidOunces, new UnitClass("Fluid Ounces", 29.573515625m) },
-                { VolumeUnit.Cups, new UnitClass("Cups", 236.588125m) },
-                { VolumeUnit.Pints, new UnitClass("Pints", 473.17625m) },
-                { VolumeUnit.Quarts, new UnitClass("Quarts", 946.3525m) },
-                { VolumeUnit.Gallons, new UnitClass("Gallons", 3785.41m) },
-                { VolumeUnit.CubicInches, new UnitClass("Cubic Inches", 16.387064m) },
-                { VolumeUnit.CubicFeet, new UnitClass("Cubic Feet", 28316.846592m) },
-                { VolumeUnit.CubicYards, new UnitClass("Cubic Yards", 764_554.85798m) },
+                { VolumeUnit.Milliliters, new UnitClass("Milliliters", 1.0m, "Icons/beaker.png") },
+                { VolumeUnit.CubicCentimeters, new UnitClass("Cubic Centimeters", 1.0m, "Icons/beaker.png") },
+                { VolumeUnit.Liters, new UnitClass("Liters", 1000m, "Icons/beaker.png") },
+                { VolumeUnit.CubicMeters, new UnitClass("Cubic Meters", 1_000_000m, "Icons/beaker.png")},
+                { VolumeUnit.Teaspoons, new UnitClass("Teaspoons", 4.9289192708m, "Icons/beaker.png") },
+                { VolumeUnit.FluidOunces, new UnitClass("Fluid Ounces", 29.573515625m, "Icons/beaker.png") },
+                { VolumeUnit.Cups, new UnitClass("Cups", 236.588125m, "Icons/beaker.png") },
+                { VolumeUnit.Pints, new UnitClass("Pints", 473.17625m, "Icons/beaker.png") },
+                { VolumeUnit.Quarts, new UnitClass("Quarts", 946.3525m, "Icons/beaker.png") },
+                { VolumeUnit.Gallons, new UnitClass("Gallons", 3785.41m, "Icons/beaker.png") },
+                { VolumeUnit.CubicInches, new UnitClass("Cubic Inches", 16.387064m, "Icons/beaker.png") },
+                { VolumeUnit.CubicFeet, new UnitClass("Cubic Feet", 28316.846592m, "Icons/beaker.png") },
+                { VolumeUnit.CubicYards, new UnitClass("Cubic Yards", 764_554.85798m, "Icons/beaker.png") },
                 { VolumeUnit.AdultHumans, new UnitClass("Adult Human Bodies", 42_000m) },
                 { VolumeUnit.DirtyDiapers, new UnitClass("Dirty Diapers", 105m, "Icons/diaper.png") }
             };
 
             public static readonly Dictionary<LengthUnit, UnitClass> lengthUnits = new()
             {
-                { LengthUnit.Millimeters, new UnitClass("Millimeters", 1.0m) },
-                { LengthUnit.Angstroms, new UnitClass("Angstroms", 0.0000001m) },
-                { LengthUnit.Nanometers, new UnitClass("Nanometers", 0.000001m) },
-                { LengthUnit.Microns, new UnitClass("Microns", 0.001m)},
-                { LengthUnit.Centimeters, new UnitClass("Centimeters", 10m) },
-                { LengthUnit.Meters, new UnitClass("Meters", 1000m) },
-                { LengthUnit.Kilometers, new UnitClass("Kilomters", 1_000_000m) },
-                { LengthUnit.Inches, new UnitClass("Inches", 25.4m) },
-                { LengthUnit.Feet, new UnitClass("Feet", 304.8m) },
-                { LengthUnit.Yards, new UnitClass("Yards", 914.4m) },
-                { LengthUnit.Miles, new UnitClass("Miles", 1_609_344m) },
-                { LengthUnit.NauticalMiles, new UnitClass("Nautical Miles", 1_852_000m) },
+                { LengthUnit.Millimeters, new UnitClass("Millimeters", 1.0m, "Icons/ruler.png") },
+                { LengthUnit.Angstroms, new UnitClass("Angstroms", 0.0000001m, "Icons/ruler.png") },
+                { LengthUnit.Nanometers, new UnitClass("Nanometers", 0.000001m, "Icons/ruler.png") },
+                { LengthUnit.Microns, new UnitClass("Microns", 0.001m, "Icons/ruler.png")},
+                { LengthUnit.Centimeters, new UnitClass("Centimeters", 10m, "Icons/ruler.png") },
+                { LengthUnit.Meters, new UnitClass("Meters", 1000m, "Icons/ruler.png") },
+                { LengthUnit.Kilometers, new UnitClass("Kilomters", 1_000_000m, "Icons/ruler.png") },
+                { LengthUnit.Inches, new UnitClass("Inches", 25.4m, "Icons/ruler.png") },
+                { LengthUnit.Feet, new UnitClass("Feet", 304.8m, "Icons/ruler.png") },
+                { LengthUnit.Yards, new UnitClass("Yards", 914.4m, "Icons/ruler.png") },
+                { LengthUnit.Miles, new UnitClass("Miles", 1_609_344m, "Icons/ruler.png") },
+                { LengthUnit.NauticalMiles, new UnitClass("Nautical Miles", 1_852_000m, "Icons/ruler.png") },
                 { LengthUnit.Bananas, new UnitClass("Bananas", 175m, "Icons/banana.png") },
-                { LengthUnit.FootballFields, new UnitClass("Football Fields", 109_728m, "Icons/footballfield.png") }
+                { LengthUnit.FootballFields, new UnitClass("Football Fields", 109_728m, "Icons/footballfield.png") },
+                { LengthUnit.F150s, new UnitClass("Ford F150s", 5882.64m) },
+                { LengthUnit.AircraftCarriers, new UnitClass("Aircraft Carriers", 342_290.4m) }
             };
 
             public static readonly Dictionary<WeightUnit, UnitClass> weightUnits = new()
             {
-                { WeightUnit.Grams, new UnitClass("Grams", 1.0m) },
-                { WeightUnit.Carats, new UnitClass("Carats", 0.200000m) },
-                { WeightUnit.Milligrams, new UnitClass("Milligrams", 0.001000m) },
-                { WeightUnit.Centigrams, new UnitClass("Centigrams", 0.010000m)},
-                { WeightUnit.Decigrams, new UnitClass("Decigrams", 0.100000m) },
-                { WeightUnit.Dekagrams, new UnitClass("Dekagrams", 10.000000m) },
-                { WeightUnit.Hectograms, new UnitClass("Hectograms", 100.000000m) },
-                { WeightUnit.Kilograms, new UnitClass("Kilograms", 1000.000000m) },
-                { WeightUnit.MetricTonnes, new UnitClass("Metric Tonnes", 1000000.000000m) },
-                { WeightUnit.Ounces, new UnitClass("Ounces", 28.349523125m) },
-                { WeightUnit.Pounds, new UnitClass("Pounds", 453.59237m) },
-                { WeightUnit.Stone, new UnitClass("Stones", 6350.293000m) },
-                { WeightUnit.ShortTons, new UnitClass("Short Tons", 907184.740000m) },
-                { WeightUnit.LongTons, new UnitClass("Long Tons", 1016046.9088m) },
+                { WeightUnit.Grams, new UnitClass("Grams", 1.0m, "Icons/scale.png") },
+                { WeightUnit.Carats, new UnitClass("Carats", 0.200000m, "Icons/scale.png") },
+                { WeightUnit.Milligrams, new UnitClass("Milligrams", 0.001000m, "Icons/scale.png") },
+                { WeightUnit.Centigrams, new UnitClass("Centigrams", 0.010000m, "Icons/scale.png")},
+                { WeightUnit.Decigrams, new UnitClass("Decigrams", 0.100000m, "Icons/scale.png") },
+                { WeightUnit.Dekagrams, new UnitClass("Dekagrams", 10.000000m, "Icons/scale.png") },
+                { WeightUnit.Hectograms, new UnitClass("Hectograms", 100.000000m, "Icons/scale.png") },
+                { WeightUnit.Kilograms, new UnitClass("Kilograms", 1000.000000m, "Icons/scale.png") },
+                { WeightUnit.MetricTonnes, new UnitClass("Metric Tonnes", 1000000.000000m, "Icons/scale.png") },
+                { WeightUnit.Ounces, new UnitClass("Ounces", 28.349523125m, "Icons/scale.png") },
+                { WeightUnit.Pounds, new UnitClass("Pounds", 453.59237m, "Icons/scale.png") },
+                { WeightUnit.Stone, new UnitClass("Stones", 6350.293000m, "Icons/scale.png") },
+                { WeightUnit.ShortTons, new UnitClass("Short Tons", 907184.740000m, "Icons/scale.png") },
+                { WeightUnit.LongTons, new UnitClass("Long Tons", 1016046.9088m, "Icons/scale.png") },
                 { WeightUnit.Penguins, new UnitClass("Penguins", 34000m, "Icons/penguin.png") },
-                { WeightUnit.JumboJets, new UnitClass("Jumbo Jets", 50_000_000m, "Icons/airplane.png") }
+                { WeightUnit.JumboJets, new UnitClass("Jumbo Jets", 50_000_000m, "Icons/airplane.png") },
+                { WeightUnit.F150s, new UnitClass("Ford F150s", 2_267_960) },
+                { WeightUnit.AircraftCarriers, new UnitClass("Aircraft Carriers", 96_300_847_462m) }
             };
         }
 
         public enum WeightUnit
         {
+            LabradorRetrievers,
+            Marshmallows,
+            Couches,
+            MoonLanders,
+            Paperclips,
+            BigMacs,
             JumboJets,
+            F150s,
+            AircraftCarriers,
             Penguins,
             Grams,
             Carats,
@@ -149,8 +161,18 @@
 
         public enum LengthUnit
         {
+            SchoolBuses,
+            ParkingSpots,
+            TRexes,
+            SubwayFootlongs,
+            HotDogs,
+            GreatWalls,
+            EmpireStateBuildings,
+            F150s,
+            AircraftCarriers,
             Bananas,
             FootballFields,
+            DNAHelix,
             Millimeters,
             Angstroms,
             Nanometers,
@@ -167,6 +189,14 @@
 
         public enum VolumeUnit
         {
+            KFCBuckets,
+            PortaPotties,
+            BeerKegs,
+            KetchupPackets,
+            Bathtubs,
+            OlympicPools,
+            ShotGlasses,
+            LargeMilkshakes,
             AdultHumans,
             DirtyDiapers,
             Milliliters,

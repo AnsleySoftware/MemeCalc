@@ -10,10 +10,52 @@
 
   <ItemGroup>
     <None Remove="beige-paper.png" />
+    <None Remove="Icons\adultBody.png" />
+    <None Remove="Icons\aircraftCarrier.png" />
+    <None Remove="Icons\bathtub.png" />
     <None Remove="Icons\beaker.png" />
+    <None Remove="Icons\beerKeg.png" />
+    <None Remove="Icons\cheeseburger.png" />
+    <None Remove="Icons\chickenBucket.png" />
+    <None Remove="Icons\dog.png" />
     <None Remove="Icons\flag.png" />
+    <None Remove="Icons\greatWall.png" />
+    <None Remove="Icons\hotdog.png" />
+    <None Remove="Icons\ketchup.png" />
+    <None Remove="Icons\marshmallow.png" />
+    <None Remove="Icons\milkshake.png" />
+    <None Remove="Icons\moonlander.png" />
+    <None Remove="Icons\paperclip.png" />
+    <None Remove="Icons\parkingSpot.png" />
+    <None Remove="Icons\pickupTruck.png" />
+    <None Remove="Icons\portapottie.png" />
     <None Remove="Icons\ruler.png" />
     <None Remove="Icons\scale.png" />
+    <None Remove="Icons\schoolBus.png" />
+    <None Remove="Icons\skyScraper.png" />
+    <None Remove="Icons\sofa.png" />
+    <None Remove="Icons\sub.png" />
+    <None Remove="Icons\swimmingPool.png" />
+    <None Remove="Icons\tRex.png" />
+    <None Remove="Icons\tumblerGlass.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Icons\adultBody.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\aircraftCarrier.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\bathtub.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\beerKeg.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\cheeseburger.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
@@ -33,7 +75,13 @@
     <Resource Include="Icons\beaker.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Icons\chickenBucket.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Icons\diaper.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\dog.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Icons\flag.png">
@@ -42,13 +90,64 @@
     <Resource Include="Icons\footballfield.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Icons\greatWall.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\hotdog.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\ketchup.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\marshmallow.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\milkshake.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\moonlander.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\paperclip.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\parkingSpot.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Icons\penguin.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\pickupTruck.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\portapottie.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Icons\ruler.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Icons\scale.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\schoolBus.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\skyScraper.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\sofa.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\sub.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\swimmingPool.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\tRex.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\tumblerGlass.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

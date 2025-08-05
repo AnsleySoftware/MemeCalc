@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,6 +19,7 @@
     <None Remove="Icons\cheeseburger.png" />
     <None Remove="Icons\chickenBucket.png" />
     <None Remove="Icons\dog.png" />
+    <None Remove="Icons\favicon.ico" />
     <None Remove="Icons\flag.png" />
     <None Remove="Icons\greatWall.png" />
     <None Remove="Icons\hotdog.png" />
@@ -38,6 +40,10 @@
     <None Remove="Icons\swimmingPool.png" />
     <None Remove="Icons\tRex.png" />
     <None Remove="Icons\tumblerGlass.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="favicon.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -82,6 +88,9 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Icons\dog.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\favicon.ico">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Icons\flag.png">

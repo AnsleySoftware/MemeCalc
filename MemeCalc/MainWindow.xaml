@@ -56,7 +56,7 @@
             </Grid.ColumnDefinitions>
             <Label Grid.Column="0" Height="50" Content="FROM" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30"/>
             <Border Grid.Column="1" Background="#FF0047AB" CornerRadius="12" Padding="2" Margin="5,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Stretch">
-                <ComboBox ItemsSource="{Binding AvailableUnits}"
+                <ComboBox ItemsSource="{Binding FromUnits}"
                           SelectedItem="{Binding SelectedFromUnit, Mode=TwoWay}"
                           Height="46"
                           Background="White"
@@ -87,7 +87,7 @@
             <Label Grid.Column="0" Height="50" Content="TO" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="30"/>
             <Border Grid.Column="1" Background="#FF0047AB" CornerRadius="12" Padding="2" Margin="5,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Stretch">
                 <ComboBox Height="46"
-                          ItemsSource="{Binding AvailableUnits}"
+                          ItemsSource="{Binding ToUnits}"
                           SelectedItem="{Binding SelectedToUnit, Mode=TwoWay}"
                           Background="White" 
                           BorderThickness="0" 
